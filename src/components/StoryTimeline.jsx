@@ -35,7 +35,7 @@ export default function StoryTimeline() {
   return (
     <section id="how" ref={containerRef} className="pt-16 pb-32 px-6 relative bg-bg border-t border-border/50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-left mb-16 md:mb-20">
           <span className="text-xs font-bold text-sage-500 tracking-[0.2em] uppercase mb-4 block">Process</span>
           <h2 className="font-mono text-4xl md:text-5xl font-bold">
             How Awaab works<span className="text-sage-500">.</span>
