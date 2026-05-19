@@ -5,7 +5,7 @@ const DOWNLOAD_URL = '#' // Replace with actual APK URL when ready
 
 export default function DownloadCTA() {
   return (
-    <section id="download" className="py-32 px-6 relative bg-bg overflow-hidden border-t border-border">
+    <section id="download" className="py-16 md:py-24 px-6 relative bg-bg overflow-hidden border-t border-border/50">
       {/* Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-hero-glow rounded-full blur-3xl pointer-events-none opacity-40 mix-blend-screen" />
 
@@ -33,7 +33,7 @@ export default function DownloadCTA() {
           viewport={{ once: true }}
           className="font-mono text-5xl md:text-7xl font-bold mb-6"
         >
-          Never miss<br /><span className="text-sage-400 text-glow">a prayer.</span>
+          Never miss<br /><span className="text-sage-400">a prayer.</span>
         </motion.h2>
 
         <motion.p
@@ -58,9 +58,9 @@ export default function DownloadCTA() {
             id="download-apk-btn"
             href={DOWNLOAD_URL}
             download
-            className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-xl box-glow hover:scale-105 active:scale-95 transition-all duration-300 text-lg"
+            className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-xl shadow-xl shadow-sage-500/10 hover:shadow-sage-500/20 hover:-translate-y-1 active:scale-95 transition-all duration-300 text-lg"
           >
-            <Download className="w-5 h-5 group-hover:animate-bounce" />
+            <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
             Download Android APK
           </a>
         </motion.div>
