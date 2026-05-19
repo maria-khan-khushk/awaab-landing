@@ -86,7 +86,7 @@ const itemVariants = {
 
 export default function Features() {
   return (
-    <section id="features" className="py-32 px-6 relative z-10 bg-bg">
+    <section id="features" className="pt-32 pb-16 px-6 relative z-10 bg-bg">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
