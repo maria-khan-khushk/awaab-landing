@@ -17,7 +17,7 @@ export default function Footer() {
 
         <div className="flex gap-6">
           <a
-            href="#"
+            href="https://github.com/maria-khan-khushk/smart_namaz_companion"
             id="footer-github-link"
             target="_blank"
             rel="noreferrer"
