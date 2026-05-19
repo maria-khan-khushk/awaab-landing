@@ -116,22 +116,22 @@ export default function AppShowcase() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index} 
-              className="w-[280px] md:w-[320px] flex-shrink-0 snap-center group flex flex-col"
+              className="w-[240px] md:w-[260px] flex-shrink-0 snap-center group flex flex-col"
             >
               {/* Realistic Phone Mockup Frame */}
-              <div className="relative w-full h-[600px] md:h-[680px] rounded-[40px] md:rounded-[48px] border-[8px] border-border bg-bg-card shadow-xl overflow-hidden mb-8 transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-sage-500/10 group-hover:border-sage-500/30">
+              <div className="relative w-full h-[500px] md:h-[540px] rounded-[36px] md:rounded-[40px] border-[6px] md:border-[8px] border-border bg-bg-card shadow-xl overflow-hidden mb-6 transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-sage-500/10 group-hover:border-sage-500/30">
                 
                 {/* Dynamic Notch hint */}
-                <div className="absolute top-0 inset-x-0 h-6 md:h-7 flex justify-center z-20">
-                  <div className="w-32 md:w-40 h-full bg-border rounded-b-xl md:rounded-b-2xl shadow-sm transition-colors duration-500 group-hover:bg-sage-500/30" />
+                <div className="absolute top-0 inset-x-0 h-5 md:h-6 flex justify-center z-20">
+                  <div className="w-24 md:w-32 h-full bg-border rounded-b-lg md:rounded-b-xl shadow-sm transition-colors duration-500 group-hover:bg-sage-500/30" />
                 </div>
                 
                 {/* Inner Bezel highlight */}
-                <div className="absolute inset-0 rounded-[32px] md:rounded-[40px] border border-white/5 z-10 pointer-events-none" />
+                <div className="absolute inset-0 rounded-[30px] md:rounded-[32px] border border-white/5 z-10 pointer-events-none" />
 
                 {/* Image Placeholder Context */}
                 <div className="absolute inset-0 bg-sage-500/5 flex flex-col items-center justify-center p-6 text-center transition-colors duration-500 group-hover:bg-sage-500/10">
-                  <span className="text-sage-500/60 font-mono text-xs md:text-sm mb-3 border border-sage-500/20 px-4 py-1.5 rounded-full bg-bg/50 backdrop-blur-sm">
+                  <span className="text-sage-500/60 font-mono text-[10px] md:text-xs mb-3 border border-sage-500/20 px-3 py-1 rounded-full bg-bg/50 backdrop-blur-sm">
                     {screen.filename}
                   </span>
                   
@@ -148,7 +148,7 @@ export default function AppShowcase() {
 
               {/* Text Content */}
               <div className="px-2">
-                <h3 className="text-xl font-bold text-fg mb-3 group-hover:text-sage-400 transition-colors duration-300">{screen.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-fg mb-2 group-hover:text-sage-400 transition-colors duration-300">{screen.title}</h3>
                 <p className="text-fg-muted text-sm leading-relaxed">{screen.desc}</p>
               </div>
             </motion.div>
