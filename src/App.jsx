@@ -4,6 +4,7 @@ import { Sun, Moon } from 'lucide-react'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import StoryTimeline from './components/StoryTimeline'
+import AppShowcase from './components/AppShowcase'
 import DownloadCTA from './components/DownloadCTA'
 import Footer from './components/Footer'
 import awaabLogo from './assets/image.png'
@@ -90,6 +91,7 @@ function App() {
         <Hero />
         <Features />
         <StoryTimeline />
+        <AppShowcase />
         <DownloadCTA />
       </main>
 
