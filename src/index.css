@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* Awaab primary muted greens */
+  --color-sage-50:  #f4f7f2;
+  --color-sage-100: #e4ebe0;
+  --color-sage-200: #c4d3c0;
+  --color-sage-300: #abb290;
+  --color-sage-400: #8a9b7f;
+  --color-sage-500: #748469;
+  --color-sage-600: #5e6b54;
+  --color-sage-700: #4a5442;
+  --color-sage-800: #373e31;
+  --color-sage-900: #262b22;
+  --color-sage-950: #161a13;
+
+  /* Warm accent */
+  --color-warm-50:  #fdf6ee;
+  --color-warm-100: #f9ead7;
+  --color-warm-200: #f2d4ae;
+
+  --color-bg:       var(--bg);
+  --color-bg-card:  var(--bg-card);
+  --color-fg:       var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-border:   var(--border-color);
+
+  --font-sans: 'Outfit', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --background-image-hero-glow:    radial-gradient(ellipse, var(--sage-glow) 0%, transparent 65%);
+  --background-image-grid-pattern: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+}
+
+/* ─── Dark mode (default) ─── */
+:root {
+  --bg:           #121212;
+  --bg-card:      #1e1e1e;
+  --fg:           #f5f5f0;
+  --fg-muted:     #b0b0a8;
+  --border-color: rgba(255, 255, 255, 0.07);
+  --grid-line:    rgba(255, 255, 255, 0.04);
+  --sage-glow:    rgba(138, 155, 127, 0.18);
+}
+
+/* ─── Light mode ─── */
+:root.light {
+  --bg:           #ffffff;
+  --bg-card:      #f9ead7;
+  --fg:           #1a1f17;
+  --fg-muted:     #5e6b54;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --grid-line:    rgba(0, 0, 0, 0.03);
+  --sage-glow:    rgba(116, 132, 105, 0.12);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 24px rgba(138, 155, 127, 0.5);
+}
+
+@utility box-glow {
+  box-shadow: 0 0 30px rgba(138, 155, 127, 0.18);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar        { width: 8px; }
+::-webkit-scrollbar-track  { background: var(--color-bg); }
+::-webkit-scrollbar-thumb  { background: var(--color-bg-card); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-sage-500); }
