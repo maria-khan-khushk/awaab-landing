@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { MapPin, Bell, Compass } from 'lucide-react'
+import { Apple, Play } from 'lucide-react'
 import awaabLogo from '../assets/awaab-logo.png'
 
 export default function Hero() {
@@ -27,103 +27,82 @@ export default function Hero() {
 
       <motion.div
         style={{ y, opacity, scale }}
-        className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center flex flex-col items-center"
+        className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center"
       >
-        {/* Badge */}
+        {/* Left Column: Logo */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sage-500/20 bg-sage-500/5 mb-8"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="relative flex justify-center lg:justify-end"
         >
-          <span className="w-2 h-2 rounded-full bg-sage-500 animate-[pulse_2s_ease-in-out_infinite]" />
-          <span className="text-xs font-semibold tracking-widest text-sage-400 uppercase">Bahria University Karachi — Available Now</span>
-        </motion.div>
-
-        {/* Logo image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-          className="mb-8 relative"
-        >
-          <div className="absolute inset-0 bg-sage-500/10 blur-3xl rounded-full scale-150 pointer-events-none" />
-          <img
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-sage-500/20 blur-3xl rounded-full w-64 h-64 pointer-events-none" />
+          <motion.img
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
             src={awaabLogo}
             alt="Awaab App Logo"
-            className="relative w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-[0_0_40px_rgba(138,155,127,0.3)] select-none"
+            className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] object-contain drop-shadow-[0_0_50px_rgba(138,155,127,0.4)] select-none"
           />
         </motion.div>
 
-        {/* Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="font-mono text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-6"
-        >
-          Your Smart<br />
-          <span className="text-sage-400 text-glow">Prayer Companion</span>
-          <span className="text-sage-500">.</span>
-        </motion.h1>
-
-        {/* Subtext */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="text-lg md:text-xl text-fg-muted max-w-2xl mx-auto leading-relaxed mb-10"
-        >
-          Never miss a prayer again. Awaab delivers accurate, location-based prayer timings,
-          authentic Azan alerts, Qibla direction, and daily Hadith — all in one app.
-        </motion.p>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-          className="flex flex-wrap justify-center gap-4"
-        >
-          <a
-            id="hero-download-btn"
-            href="#download"
-            className="group relative px-8 py-4 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-xl overflow-hidden box-glow hover:scale-105 active:scale-95 transition-all duration-300"
+        {/* Right Column: Content */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="font-mono text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-6"
           >
-            <span className="relative z-10 flex items-center gap-2">
-              Download for Android
-            </span>
-          </a>
-          <a
-            href="#features"
-            id="hero-features-btn"
-            className="px-8 py-4 bg-bg-card border border-border text-fg font-bold rounded-xl hover:border-sage-500/50 hover:text-sage-400 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
-          >
-            Explore Features
-          </a>
-        </motion.div>
+            Your Smart<br />
+            <span className="text-sage-400 text-glow">Namaz Companion</span>
+            <span className="text-sage-500">.</span>
+          </motion.h1>
 
-        {/* Floating feature pills */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-          className="mt-14 flex flex-wrap justify-center gap-3"
-        >
-          {[
-            { icon: <MapPin className="w-3.5 h-3.5" />, text: "Location-Based Timings" },
-            { icon: <Bell  className="w-3.5 h-3.5" />, text: "Azan Alerts" },
-            { icon: <Compass className="w-3.5 h-3.5" />, text: "Qibla Direction" },
-          ].map((pill, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-bg-card border border-border text-xs font-medium text-fg-muted"
+          {/* Subtext */}
+          <motion.p
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="text-lg md:text-xl text-fg-muted max-w-xl leading-relaxed mb-10"
+          >
+            Never miss a prayer again. Awaab delivers accurate, location-based prayer timings,
+            authentic Azan alerts, Qibla direction, and daily Hadith — beautifully integrated into a modern experience.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+          >
+            {/* App Store Button */}
+            <a
+              href="#download"
+              className="group relative w-full sm:w-auto flex items-center justify-center gap-3 px-6 py-4 bg-bg-card/80 backdrop-blur-xl border border-border hover:border-sage-500/50 rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 box-glow"
             >
-              <span className="text-sage-400">{pill.icon}</span>
-              {pill.text}
-            </div>
-          ))}
-        </motion.div>
+              <Apple className="w-8 h-8 text-fg" />
+              <div className="flex flex-col items-start text-left">
+                <span className="text-[10px] font-semibold tracking-wider text-fg-muted uppercase leading-none">Download on the</span>
+                <span className="text-lg font-bold text-fg leading-tight">App Store</span>
+              </div>
+            </a>
+
+            {/* Google Play Button */}
+            <a
+              href="#download"
+              className="group relative w-full sm:w-auto flex items-center justify-center gap-3 px-6 py-4 bg-bg-card/80 backdrop-blur-xl border border-border hover:border-sage-500/50 rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 box-glow"
+            >
+              <Play className="w-7 h-7 text-sage-400" fill="currentColor" />
+              <div className="flex flex-col items-start text-left">
+                <span className="text-[10px] font-semibold tracking-wider text-fg-muted uppercase leading-none">Get it on</span>
+                <span className="text-lg font-bold text-fg leading-tight">Google Play</span>
+              </div>
+            </a>
+          </motion.div>
+        </div>
       </motion.div>
 
       {/* Fade to next section */}
