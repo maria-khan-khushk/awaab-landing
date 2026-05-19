@@ -116,17 +116,19 @@ export default function Features() {
             <motion.div
               key={i}
               variants={itemVariants}
-              className="group relative p-8 bg-bg-card rounded-2xl border border-border overflow-hidden hover:border-sage-500/30 transition-colors duration-500"
+              className="group relative p-6 lg:p-8 bg-bg-card/40 rounded-2xl border border-border/60 hover:border-sage-500/20 hover:bg-bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sage-500/5 flex flex-col"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-sage-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-sage-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-sage-500/10 border border-sage-500/20 flex items-center justify-center shrink-0 group-hover:bg-sage-500/20 transition-colors duration-300">
                   {feat.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-sage-400 transition-colors">{feat.title}</h3>
-                <p className="text-fg-muted leading-relaxed text-sm">{feat.desc}</p>
+                <h3 className="text-lg font-bold text-fg group-hover:text-sage-400 transition-colors duration-300 pt-1">
+                  {feat.title}
+                </h3>
               </div>
+              <p className="text-fg-muted leading-relaxed text-sm mt-auto">
+                {feat.desc}
+              </p>
             </motion.div>
           ))}
         </motion.div>
