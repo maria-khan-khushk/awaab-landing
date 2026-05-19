@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Apple, Play } from 'lucide-react'
-import awaabLogo from '../assets/awaab-logo.png'
+import { Download } from 'lucide-react'
+import awaabLogo from '../assets/image.png'
 
 export default function Hero() {
   const containerRef = useRef(null)
@@ -36,13 +36,13 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative flex justify-center lg:justify-end"
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-sage-500/20 blur-3xl rounded-full w-64 h-64 pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-sage-500/20 blur-3xl rounded-full w-48 h-48 md:w-64 md:h-64 pointer-events-none" />
           <motion.img
             animate={{ y: [-10, 10, -10] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
             src={awaabLogo}
             alt="Awaab App Logo"
-            className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] object-contain drop-shadow-[0_0_50px_rgba(138,155,127,0.4)] select-none"
+            className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-[0_0_30px_rgba(138,155,127,0.3)] select-none"
           />
         </motion.div>
 
@@ -78,27 +78,16 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
-            {/* App Store Button */}
+            {/* Download APK Button */}
             <a
               href="#download"
-              className="group relative w-full sm:w-auto flex items-center justify-center gap-3 px-6 py-4 bg-bg-card/80 backdrop-blur-xl border border-border hover:border-sage-500/50 rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 box-glow"
+              className="group relative w-full sm:w-auto flex items-center justify-center gap-4 px-8 py-4 bg-sage-500/10 backdrop-blur-xl border border-sage-500/30 hover:bg-sage-500/20 hover:border-sage-500/60 rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 box-glow"
             >
-              <Apple className="w-8 h-8 text-fg" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-sage-500/0 via-sage-500/10 to-sage-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Download className="w-6 h-6 text-sage-400 group-hover:text-sage-300 transition-colors" />
               <div className="flex flex-col items-start text-left">
-                <span className="text-[10px] font-semibold tracking-wider text-fg-muted uppercase leading-none">Download on the</span>
-                <span className="text-lg font-bold text-fg leading-tight">App Store</span>
-              </div>
-            </a>
-
-            {/* Google Play Button */}
-            <a
-              href="#download"
-              className="group relative w-full sm:w-auto flex items-center justify-center gap-3 px-6 py-4 bg-bg-card/80 backdrop-blur-xl border border-border hover:border-sage-500/50 rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 box-glow"
-            >
-              <Play className="w-7 h-7 text-sage-400" fill="currentColor" />
-              <div className="flex flex-col items-start text-left">
-                <span className="text-[10px] font-semibold tracking-wider text-fg-muted uppercase leading-none">Get it on</span>
-                <span className="text-lg font-bold text-fg leading-tight">Google Play</span>
+                <span className="text-[10px] font-semibold tracking-wider text-sage-400/80 uppercase leading-none">Android Only</span>
+                <span className="text-lg font-bold text-fg leading-tight tracking-wide">Download APK</span>
               </div>
             </a>
           </motion.div>
