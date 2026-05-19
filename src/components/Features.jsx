@@ -93,7 +93,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-16 md:mb-24"
+          className="mb-12 md:mb-16"
         >
           <span className="text-xs font-bold text-sage-500 tracking-[0.2em] uppercase mb-4 block">Features</span>
           <h2 className="font-mono text-4xl md:text-5xl font-bold mb-6">
