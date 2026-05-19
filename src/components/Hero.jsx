@@ -55,12 +55,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-center gap-4 self-center md:self-start mt-4"
           >
             {/* Download APK Button */}
             <a
               href="#download"
-              className="group relative w-full sm:w-auto flex items-center justify-center gap-4 px-8 py-4 bg-sage-500 text-white hover:bg-sage-600 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-sage-500/10"
+              className="group relative flex items-center justify-center gap-4 px-8 py-4 bg-sage-500 text-white hover:bg-sage-600 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-sage-500/10"
             >
               <Download className="w-5 h-5 text-white/90 group-hover:text-white transition-colors" />
               <div className="flex flex-col items-start text-left">

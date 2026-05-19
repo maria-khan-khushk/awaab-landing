@@ -58,7 +58,7 @@ export default function DownloadCTA() {
             id="download-apk-btn"
             href={DOWNLOAD_URL}
             download
-            className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-xl shadow-xl shadow-sage-500/10 hover:shadow-sage-500/20 hover:-translate-y-1 active:scale-95 transition-all duration-300 text-lg"
+            className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-xl shadow-xl shadow-sage-500/10 hover:shadow-sage-500/20 hover:-translate-y-1 active:scale-95 transition-all duration-300 text-lg"
           >
             <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
             Download Android APK
@@ -71,9 +71,13 @@ export default function DownloadCTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-16 inline-flex items-center gap-2 px-4 py-2 bg-bg-card border border-border rounded-full font-mono text-xs text-fg-muted"
+          className="mt-16 flex flex-col md:inline-flex md:flex-row items-center justify-center gap-2 md:gap-3 px-6 py-4 md:py-2 bg-bg-card border border-border rounded-2xl md:rounded-full font-mono text-[10px] md:text-xs text-fg-muted max-w-[280px] md:max-w-none mx-auto"
         >
-          v1.0.0 &nbsp;—&nbsp; Bahria University Karachi &nbsp;—&nbsp; BSE Semester Project 2026
+          <span>v1.0.0</span>
+          <span className="hidden md:inline text-sage-500/50">—</span>
+          <span>Bahria University Karachi</span>
+          <span className="hidden md:inline text-sage-500/50">—</span>
+          <span>BSE Semester Project 2026</span>
         </motion.div>
       </div>
     </section>
