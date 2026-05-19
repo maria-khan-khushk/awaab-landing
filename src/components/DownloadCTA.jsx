@@ -5,7 +5,7 @@ const DOWNLOAD_URL = '#' // Replace with actual APK URL when ready
 
 export default function DownloadCTA() {
   return (
-    <section id="download" className="py-16 md:py-24 px-6 relative bg-bg overflow-hidden border-t border-border/50">
+    <section id="download" className="pt-12 md:pt-16 pb-16 md:pb-24 px-6 relative bg-bg overflow-hidden border-t border-border/50">
       {/* Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-hero-glow rounded-full blur-3xl pointer-events-none opacity-40 mix-blend-screen" />
 

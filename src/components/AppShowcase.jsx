@@ -71,7 +71,7 @@ export default function AppShowcase() {
   }
 
   return (
-    <section id="showcase" className="py-12 md:py-16 px-6 md:px-10 lg:px-24 bg-bg border-t border-border/50 overflow-hidden relative">
+    <section id="showcase" className="pt-12 md:pt-16 pb-4 md:pb-8 px-6 md:px-10 lg:px-24 bg-bg border-t border-border/50 overflow-hidden relative">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Header Section */}
