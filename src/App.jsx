@@ -60,6 +60,7 @@ function App() {
         <div className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-sm font-medium text-fg-muted hover:text-fg transition-colors">Features</a>
           <a href="#how"      className="text-sm font-medium text-fg-muted hover:text-fg transition-colors">How It Works</a>
+          <a href="#showcase" className="text-sm font-medium text-fg-muted hover:text-fg transition-colors">Screens</a>
           <a href="#download" className="text-sm font-medium text-fg-muted hover:text-sage-400 transition-colors">Download</a>
         </div>
 

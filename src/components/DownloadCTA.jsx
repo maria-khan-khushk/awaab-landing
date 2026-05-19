@@ -65,20 +65,6 @@ export default function DownloadCTA() {
           </a>
         </motion.div>
 
-        {/* Meta badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 flex flex-col md:inline-flex md:flex-row items-center justify-center gap-2 md:gap-3 px-6 py-4 md:py-2 bg-bg-card border border-border rounded-2xl md:rounded-full font-mono text-[10px] md:text-xs text-fg-muted max-w-[280px] md:max-w-none mx-auto"
-        >
-          <span>v1.0.0</span>
-          <span className="hidden md:inline text-sage-500/50">—</span>
-          <span>Bahria University Karachi</span>
-          <span className="hidden md:inline text-sage-500/50">—</span>
-          <span>BSE Semester Project 2026</span>
-        </motion.div>
       </div>
     </section>
   )
