@@ -6,6 +6,7 @@ import Features from './components/Features'
 import StoryTimeline from './components/StoryTimeline'
 import DownloadCTA from './components/DownloadCTA'
 import Footer from './components/Footer'
+import awaabLogo from './assets/image.png'
 
 function App() {
   const [theme, setTheme] = useState('dark')
@@ -51,13 +52,8 @@ function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 py-4 lg:px-10 border-b border-border bg-bg/80 backdrop-blur-xl transition-all duration-400">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-sage-500/20 border border-sage-500/30 flex items-center justify-center">
-            <span className="text-sage-400 text-sm font-bold font-mono">ع</span>
-          </div>
-          <span className="font-mono font-bold text-lg tracking-wider text-fg">
-            AWAAB<span className="text-sage-500">.</span>
-          </span>
+        <a href="#" className="flex items-center">
+          <img src={awaabLogo} alt="Awaab Logo" className="h-12 w-auto object-contain" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -71,7 +67,7 @@ function App() {
           <button
             onClick={toggleTheme}
             id="theme-toggle-btn"
-            className="w-10 h-10 rounded-xl border border-border bg-bg-card text-fg hover:border-sage-500/50 hover:text-sage-500 flex items-center justify-center transition-all duration-300 box-glow"
+            className="w-10 h-10 rounded-xl border border-border bg-bg-card text-fg hover:border-sage-500/50 hover:text-sage-500 flex items-center justify-center transition-all duration-300 shadow-sm"
             aria-label="Toggle theme"
           >
             {theme === 'dark'
@@ -83,7 +79,7 @@ function App() {
           <a
             href="#download"
             id="nav-download-btn"
-            className="px-5 py-2.5 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-lg text-sm transition-all duration-300 box-glow hover:scale-105 active:scale-95"
+            className="px-5 py-2.5 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-lg text-sm transition-all duration-300 shadow-sm hover:scale-105 active:scale-95"
           >
             Download App
           </a>
