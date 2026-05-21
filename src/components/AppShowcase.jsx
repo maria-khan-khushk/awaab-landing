@@ -2,6 +2,8 @@ import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
+const screenImages = import.meta.glob('../assets/screens/*.png', { eager: true, as: 'url' })
+
 const screens = [
   {
     title: "Home Screen",
@@ -137,7 +139,7 @@ export default function AppShowcase() {
                   
                   {/* Actual Image Tag */}
                   <img 
-                    src={`/src/assets/screens/${screen.filename}`} 
+                    src={screenImages[`../assets/screens/${screen.filename}`]}
                     alt={screen.title}
                     className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
                     onLoad={(e) => e.target.style.opacity = '1'}
