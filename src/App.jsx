@@ -79,7 +79,7 @@ function App() {
           </button>
 
           <a
-            href="/awaablatest.apk"
+            href="/Awwab.apk"
             download
             id="nav-download-btn"
             className="px-5 py-2.5 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-lg text-sm transition-all duration-300 shadow-sm hover:scale-105 active:scale-95"

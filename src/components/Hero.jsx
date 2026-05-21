@@ -59,7 +59,7 @@ export default function Hero() {
           >
             {/* Download APK Button */}
             <a
-              href="/awaablatest.apk"
+              href="/Awwab.apk"
               download
               className="group relative flex items-center justify-center gap-4 px-8 py-4 bg-sage-500 text-white hover:bg-sage-600 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-sage-500/10"
             >
