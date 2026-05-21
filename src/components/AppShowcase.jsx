@@ -49,8 +49,8 @@ const screens = [
     filename: "screen-9.png"
   },
   {
-    title: "Urdu Dark Mode Screen",
-    desc: "Experience Awaab in Urdu with a clean dark-mode interface.",
+    title: "Urdu Mode Screen",
+    desc: "Experience Awaab in Urdu with a clean interface.",
     filename: "screen-10.png"
   }
 ]

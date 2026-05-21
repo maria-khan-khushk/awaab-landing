@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
 
-const DOWNLOAD_URL = '#' // Replace with actual APK URL when ready
+const DOWNLOAD_URL = '/awaablatest.apk'
 
 export default function DownloadCTA() {
   return (
