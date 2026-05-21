@@ -1,8 +1,29 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import screen1 from '../assets/screens/screen-1.png'
+import screen2 from '../assets/screens/screen-2.png'
+import screen3 from '../assets/screens/screen-3.png'
+import screen4 from '../assets/screens/screen-4.png'
+import screen5 from '../assets/screens/screen-5.png'
+import screen6 from '../assets/screens/screen-6.png'
+import screen7 from '../assets/screens/screen-7.png'
+import screen8 from '../assets/screens/screen-8.png'
+import screen9 from '../assets/screens/screen-9.png'
+import screen10 from '../assets/screens/screen-10.png'
 
-const screenImages = import.meta.glob('../assets/screens/*.png', { eager: true, as: 'url' })
+const screenImages = {
+  'screen-1.png': screen1,
+  'screen-2.png': screen2,
+  'screen-3.png': screen3,
+  'screen-4.png': screen4,
+  'screen-5.png': screen5,
+  'screen-6.png': screen6,
+  'screen-7.png': screen7,
+  'screen-8.png': screen8,
+  'screen-9.png': screen9,
+  'screen-10.png': screen10,
+}
 
 const screens = [
   {
@@ -139,7 +160,7 @@ export default function AppShowcase() {
                   
                   {/* Actual Image Tag */}
                   <img 
-                    src={screenImages[`../assets/screens/${screen.filename}`]}
+                    src={screenImages[screen.filename]}
                     alt={screen.title}
                     className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
                     onLoad={(e) => e.target.style.opacity = '1'}
